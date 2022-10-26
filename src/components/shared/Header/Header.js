@@ -1,6 +1,6 @@
 import React from "react";
-import logo from '../../../assets/logo.png'
-import {Link} from 'react-router-dom'
+import logo from "../../../assets/logo.png";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -28,43 +28,51 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to='/courses'>Courses</Link>
-               
+                <Link to="/">Home</Link>
               </li>
+              <li>
+                <Link to="/courses">Courses</Link>
+              </li>
+
+              <li>
+                <Link to="/faq">FAQ</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <div className="pr-5 ml-2">
+                <a className="btn">Login</a>
+              </div>
              
-              <li>
-              <Link to='/faq'>FAQ</Link>
-              </li>
-              <li>
-              <Link to='/blog'>Blog</Link>
-              </li>
             </ul>
           </div>
           <div className="flex items-center">
             <img className="w-14" src={logo} alt="logo" />
-          <a className="btn btn-ghost normal-case text-xl">Career Plus</a>
+            <a className="btn btn-ghost normal-case text-xl">Career Plus</a>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              
-              <Link to='/courses'>Courses</Link>
-            </li>
-            
-            <li>
-            <Link to='/faq'>FAQ</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-            <Link to='/blog'>Blog</Link>
+              <Link to="/courses">Courses</Link>
+            </li>
+
+            <li>
+              <Link to="/faq">FAQ</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
-        </div>
-        <div className="pr-5 ml-2">
-          <a className="btn">Login</a>
-        </div>
-        <div className="pr-5">
-          <a className="btn">Dark</a>
+          <div className="pr-5 ml-2">
+            <a className="btn">Login</a>
+          </div>
+          <div className="pr-5">
+            <a className="btn">Dark</a>
+          </div>
         </div>
       </div>
     </div>
