@@ -82,9 +82,14 @@ const Header = () => {
             {
               user?.uid?<>
               <button onClick={handleLOgOUt} className="btn">Log Out</button>
-              <p>{user?.displayName}</p>
-              </>:<a className="btn">Login</a>
+              
+              </>:<Link to='/login' className="btn">Login</Link>
             }
+          </div>
+          <div className="pr-5">
+             {
+              user?.uid&&<img title={user?.displayName} style={{height:'30px'}} className="rounded-full" src={user?.photoURL} alt="" />
+             }
           </div>
           <div className="pr-5">
             <a className="btn">Dark</a>
