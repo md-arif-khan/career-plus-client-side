@@ -10,7 +10,7 @@ const CourseDetail = () => {
     decription,
     picture,
     author,
-    
+    ratting,
     total_view,
     current_student,
   } = course;
