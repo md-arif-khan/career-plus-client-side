@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
-
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 const CourseDetail = () => {
   const course = useLoaderData();
   const {
@@ -24,7 +25,14 @@ const CourseDetail = () => {
 			
 		</div>
         </div>
-        <button className="btn btn-outline btn-primary">Download</button>
+        
+		<Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf} className="btn btn-outline btn-primary">Download</button>}
+      </Pdf>
+	  <div ref={ref}>
+        <h1>Hello CodeSandbox</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </div>
 	</div>
 	<div>
 		<img src={picture} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
