@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from './../../../contexts/AuthProvider/AuthProvider';
+
 const Header = () => {
+  const [theme,setTheme]=useState(false)
   const {user,logOut}=useContext(AuthContext)
   const handleLOgOUt=()=>{
     logOut()
@@ -12,6 +14,9 @@ const Header = () => {
     .catch(error=>{
       console.log(error)
     })
+  }
+  const themeChange=()=>{
+    setTheme(!theme)
   }
   return (
     <div>
@@ -92,7 +97,9 @@ const Header = () => {
              }
           </div>
           <div className="pr-5">
-            <a className="btn">Dark</a>
+           {
+            theme? <button onClick={themeChange} className="btn">Dark</button>: <button onClick={themeChange} className="btn">Light</button>
+           }
           </div>
         </div>
       </div>

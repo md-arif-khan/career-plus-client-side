@@ -10,6 +10,7 @@ import CheckOut from './../../components/CheckOut/CheckOut';
 import Register from '../../components/Register/Register';
 import Login from '../../components/Login/Login';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import Error from '../../components/Error/Error';
 export const routes=createBrowserRouter([
     {
         path:'/',
@@ -55,6 +56,10 @@ export const routes=createBrowserRouter([
             {
                 path:'/login',
                 element:<Login></Login>
+            },
+            {
+                path:'*',
+                element:<Error></Error>
             }
 
         ]
