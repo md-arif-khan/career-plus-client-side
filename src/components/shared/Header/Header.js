@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from './../../../contexts/AuthProvider/AuthProvider';
 const Header = () => {
+  const {user,logOut}=useContext(AuthContext)
+  const handleLOgOUt=()=>{
+    logOut()
+    .then(()=>{
+
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  }
   return (
     <div>
       <div className="navbar border-b-[1px]">
@@ -68,7 +79,12 @@ const Header = () => {
             </li>
           </ul>
           <div className="pr-5 ml-2">
-            <a className="btn">Login</a>
+            {
+              user?.uid?<>
+              <button onClick={handleLOgOUt} className="btn">Log Out</button>
+              <p>{user?.displayName}</p>
+              </>:<a className="btn">Login</a>
+            }
           </div>
           <div className="pr-5">
             <a className="btn">Dark</a>
