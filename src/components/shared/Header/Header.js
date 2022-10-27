@@ -19,10 +19,10 @@ const Header = () => {
     setTheme(!theme)
   }
   return (
-    <div>
+    <div className="bg-[#6B0BF0] text-white">
       <div className="navbar border-b-[1px]">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown  text-black">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,14 +57,19 @@ const Header = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <div className="pr-5 ml-2">
-                <a className="btn">Login</a>
+              {
+              user?.uid?<>
+              <button onClick={handleLOgOUt} className="btn btn-primary">Log Out</button>
+              
+              </>:<Link to='/login' className="btn btn-primary">Login</Link>
+            }
               </div>
              
             </ul>
           </div>
           <div className="flex items-center">
             <img className="w-14" src={logo} alt="logo" />
-            <a className="btn btn-ghost normal-case text-xl">Career Plus</a>
+            <Link to='/' className="btn btn-ghost normal-case text-xl">Career Plus</Link>
           </div>
         </div>
         <div className="navbar-end hidden lg:flex">
@@ -86,9 +91,9 @@ const Header = () => {
           <div className="pr-5 ml-2">
             {
               user?.uid?<>
-              <button onClick={handleLOgOUt} className="btn">Log Out</button>
+              <button onClick={handleLOgOUt} className="btn btn-primary">Log Out</button>
               
-              </>:<Link to='/login' className="btn">Login</Link>
+              </>:<Link to='/login' className="btn btn-primary">Login</Link>
             }
           </div>
           <div className="pr-5">
@@ -98,7 +103,7 @@ const Header = () => {
           </div>
           <div className="pr-5">
            {
-            theme? <button onClick={themeChange} className="btn">Dark</button>: <button onClick={themeChange} className="btn">Light</button>
+            theme? <button onClick={themeChange} className="btn bg-[black]">Dark</button>: <button onClick={themeChange} className="btn bg-[white] text-black">Light</button>
            }
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import './Register.css'
 import { AuthContext } from './../../contexts/AuthProvider/AuthProvider';
+
 const Register = () => {
   const {createUser,updateUserProfile}=useContext(AuthContext)
   const handleSubmit=(event)=>{

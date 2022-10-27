@@ -24,7 +24,7 @@ export const routes=createBrowserRouter([
                 path:'/courses',
                 element:<Courses></Courses>,
                 loader:async ()=>{
-                    return fetch('http://localhost:5000/courses')
+                    return fetch('https://career-plus-server-site.vercel.app/courses')
                 }
             },
             {
@@ -39,14 +39,14 @@ export const routes=createBrowserRouter([
                 path:'/courseDetail/:id',
                 element:<CourseDetail></CourseDetail>,
                 loader:({params})=>{
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://career-plus-server-site.vercel.app/courses/${params.id}`)
                 }
             },
             {
                 path:'/checkout/:id',
                 element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader:({params})=>{
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://career-plus-server-site.vercel.app/courses/${params.id}`)
                 }
             },
             {
