@@ -7,6 +7,7 @@ const CourseDetail = () => {
   const course = useLoaderData();
   const {
     title,
+	id,
     decription,
     picture,
     author,
@@ -39,7 +40,7 @@ const CourseDetail = () => {
 	</div>
 	<div className="flex flex-wrap justify-between" >
 		<div className="space-x-2">
-			<Link to='/checkout'><button className="btn btn-outline btn-primary"> Checkout</button></Link>
+			<Link to={`/checkout/${id}`}><button className="btn btn-outline btn-primary">Get premium access</button></Link>
 		</div>
 		<div className="flex space-x-2 text-sm dark:text-gray-400">
 			<button type="button" className="flex items-center p-1 space-x-1.5">

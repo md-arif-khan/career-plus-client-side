@@ -42,8 +42,11 @@ export const routes=createBrowserRouter([
                 }
             },
             {
-                path:'/checkout',
-                element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>
+                path:'/checkout/:id',
+                element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
+                loader:({params})=>{
+                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                }
             },
             {
                 path:'/register',
