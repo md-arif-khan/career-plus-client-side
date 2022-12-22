@@ -48,7 +48,7 @@ const Blog = () => {
 <div className=" mb-8 text-white dark:bg-gray-800 dark:text-gray-100 bg-[#1F2937]">
 	<div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-gray-900">
 		<div className="flex items-center justify-between">
-			<span className="text-sm dark:text-gray-400">August 27, 2022</span>
+			<span className="text-sm dark:text-gray-400">August 24, 2022</span>
 			<a rel="noopener noreferrer" href="#" className="px-2 py-1 font-bold rounded dark:bg-violet-400 dark:text-gray-900">Router</a>
 		</div>
 		<div className="mt-3">
@@ -60,7 +60,7 @@ const Blog = () => {
 			<div>
 				<a rel="noopener noreferrer" href="#" className="flex items-center">
 					<img src="https://source.unsplash.com/50x50/?portrait" alt="avatar" className="object-cover w-10 h-10 mx-4 rounded-full dark:bg-gray-500" />
-					<span className="hover:underline dark:text-gray-400">Leroy Jenkins</span>
+					<span className="hover:underline dark:text-gray-400">Leroys Jenkins</span>
 				</a>
 			</div>
 		</div>
@@ -69,7 +69,7 @@ const Blog = () => {
 <div className=" mb-8 text-white dark:bg-gray-800 dark:text-gray-100 bg-[#1F2937]">
 	<div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-gray-900">
 		<div className="flex items-center justify-between">
-			<span className="text-sm dark:text-gray-400">August 27, 2022</span>
+			<span className="text-sm dark:text-gray-400">August 17, 2022</span>
 			<a rel="noopener noreferrer" href="#" className="px-2 py-1 font-bold rounded dark:bg-violet-400 dark:text-gray-900">Node</a>
 		</div>
 		<div className="mt-3">
@@ -81,7 +81,7 @@ const Blog = () => {
 			<div>
 				<a rel="noopener noreferrer" href="#" className="flex items-center">
 					<img src="https://source.unsplash.com/50x50/?portrait" alt="avatar" className="object-cover w-10 h-10 mx-4 rounded-full dark:bg-gray-500" />
-					<span className="hover:underline dark:text-gray-400">Leroy Jenkins</span>
+					<span className="hover:underline dark:text-gray-400">Leroy Jenkin</span>
 				</a>
 			</div>
 		</div>

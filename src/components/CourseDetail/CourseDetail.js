@@ -18,7 +18,7 @@ const CourseDetail = () => {
   
   return (
     <div className="flex justify-center mt-10">
-     <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+     <div  ref={ref} className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
 	<div className="flex space-x-4 justify-between">
 		<div>
         <img alt="" src="https://source.unsplash.com/100x100/?portrait" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
@@ -33,7 +33,7 @@ const CourseDetail = () => {
       </Pdf>
 	  
 	</div>
-	<div  ref={ref}>
+	<div>
 		<img src={picture} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
 		<h2 className="mb-1 text-xl font-semibold">{title}</h2>
 		<p className="text-sm dark:text-gray-400">{decription}</p>
