@@ -11,6 +11,7 @@ import Register from '../../components/Register/Register';
 import Login from '../../components/Login/Login';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import Error from '../../components/Error/Error';
+import Contact from '../../components/Contact/Contact';
 export const routes=createBrowserRouter([
     {
         path:'/',
@@ -34,6 +35,10 @@ export const routes=createBrowserRouter([
             {
                 path:'/blog',
                 element:<Blog></Blog>
+            },
+            {
+                path:'/contact',
+                element:<Contact></Contact>
             },
             {
                 path:'/courseDetail/:id',
